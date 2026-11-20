@@ -99,7 +99,7 @@ def refund_cents(booking: BookingRecord, request: CancellationRequest) -> int:
     the tier table and then the processing floor.
     """
     if booking.interval.has_begun_by(request.requested_at):
-        return None
+        return 0
     if is_waived(request):
         return booking.price_as_booked_cents
     tier = tier_for_lead(lead_minutes(booking, request))

@@ -1,1 +1,1 @@
-babel==2.9.0
+# Runtime dependencies. The service currently needs none beyond the standard library.
