@@ -69,3 +69,17 @@ The suite passes as shipped. The Lab 12 handout tells you when to use the
 other three tools that `requirements-dev.txt` installs.
 
 See the Lab 12 handout on the course page for the milestones you show a TA.
+
+## Lab 12 write-up and AI use
+
+The CI gate findings are in [FINDINGS.md](FINDINGS.md).
+
+Tools and models used:
+
+- **Claude Code** (VS Code extension), running the **Claude Opus 5.5** model
+  (`claude-opus-5-5`). It wrote the CI workflow, fixed the ruff and mypy findings,
+  decided how to handle the audit finding, reviewed `changes/bad-change.patch`, and drafted
+  `FINDINGS.md`.
+- **GitHub Actions**, which runs the pipeline in `.github/workflows/ci.yml`.
+- **pytest, ruff, mypy, and pip-audit**, the four checks in that pipeline, at the versions
+  pinned in `requirements-dev.txt`.
